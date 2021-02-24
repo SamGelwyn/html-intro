@@ -1,8 +1,25 @@
 <html>
-    <head>
-        <title>Hello World</title>
-    </head>
-    <body>
-        Hello World.
-    </body>
+  <head>
+    <title>Hello World</title>
+    <style>
+      .greeting {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+      }
+    </style>
+    <script>
+      function sayHi (name) {
+        alert('Hello ' + name);
+      }
+      function sayHiToInputName (name) {
+        const input = document.getElementById('name');
+        sayHi(input.value);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="greeting">Hello World.</h1>
+    <button onclick="sayHi('Sam')">Hi Sam</button>
+    <button onclick="sayHi('Jed')">Hi Jed</button>
+    <input id="name" /><button onclick="sayHiToInputName()">Hi ...</button>
+  </body>
 </html>
